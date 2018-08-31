@@ -1,133 +1,309 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:fb="http://ogp.me/ns/fb#"><head><!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta name="x-apple-disable-message-reformatting"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:url" content="http://internal.staging.swiftdigital.com.au/pub/pubType/EO/pubID/zzzz5b889dc4c4a7c922/interface.html"><meta property="og:type" content="website"><meta property="og:title" content=""><meta property="og:image" content=""><meta property="og:image:width" content="200"><meta property="og:image:height" content="200"><link rel="icon" type="image/png" href="http://internal.staging.swiftdigital.com.au/favicon.ico"><title>Internal Testing - Retest API Subscription Page</title><link rel="stylesheet" href="http://internal.staging.swiftdigital.com.au/includes/t3/page/assets/css/page.css"><link rel="stylesheet" href="http://internal.staging.swiftdigital.com.au/includes/t3/composer/assets/css/email.css"><!--[if !mso]><!-- --><link rel="stylesheet" href="http://internal.staging.swiftdigital.com.au/includes/t3/composer/assets/css/dynamic_import.css?composerid=zzzz5b889dc4c4a84868&amp;themeID="><!--<![endif]--><link rel="stylesheet" href="http://internal.staging.swiftdigital.com.au/includes/t3/composer/assets/css/dynamic_brand.css?composerid=zzzz5b889dc4c4a84868&amp;themeID="><!--[if gte mso 12]>
-    <style type="text/css">
-.custom_font {
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+<html>
+<head>
+<meta name="robots" content="noindex, noarchive">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+<title>Canteloupe - Subscribe</title>
+
+                <!-- STYLES -->
+                <style type="text/css">
+.ReadMsgBody {
+	width: 100%;
 }
-</style>
-<![endif]--><style>glyphicon.glyphicon-arrow-down{display:none!important}#layout>tbody>tr>td,#layout>tbody>tr>td>table>tbody>tr>td{border:none!important}.block{cursor:auto!important}@media screen and (max-width:650px){#layout .btn-cm,#layout .grid>table,#layout .section,.section>tbody>tr>td>.grid>table{width:100%!important}#layout .block[data-sd-content=article] .figure img:not([data-full-width=false]),#layout .block[data-sd-content=image] img:not([data-full-width=false]),#layout .block[data-sd-content=map] img,#layout .block[data-sd-content=video-email] img:not([data-full-width=false]):not(.btn-play){width:100%!important;height:auto!important}#layout .btn-cm{padding:10px 0!important}#layout .btn-width-auto{padding:10px 6%!important;width:auto!important}#layout,#layout>tbody>tr>td>div>table,#layout>tbody>tr>td>table,.grid>table>tbody>tr>td>table{display:table!important}.sd-mobile-quicklinks .grid{display:block!important;font-size:12px!important;max-height:none!important}#layout,#layout .block>table,#layout .grid,#layout .grid>table>tbody>tr>td>table.contenttable,#layout .section>tbody>tr>td>table{height:auto!important;width:100%!important}.grid>table>tbody>tr>td>table.contenttable>tbody>tr>td{height:auto!important}.block[data-sd-content=links]{display:none!important}.sd-mobile-quicklinks .block:not([data-sd-content=none]){display:table-cell!important;font-size:12px!important;line-height:normal!important;max-height:none!important;width:auto!important;height:auto!important;overflow:visible!important;padding:15px!important}.sd-mobile-quicklinks .guttertable,.sd-mobile-quicklinks .margintable{height:0!important}.sd-mobile-hidden{display:none!important}.block[data-sd-content=video-page] .figure iframe,.sd-mobile-full-width{width:100%!important}.sd-padding-0{padding:0!important}.sd-padding-top-0{padding-top:0!important}.sd-padding-right-0{padding-right:0!important}.sd-padding-bottom-0{padding-bottom:0!important}.sd-padding-left-0{padding-left:0!important}.sd-padding-top-15{padding-top:15px!important}.sd-padding-right-15{padding-right:15px!important}.sd-padding-bottom-15{padding-bottom:15px!important}.sd-padding-left-15{padding-left:15px!important}.sd-padding-15{padding:15px!important}.sd-padding-top-20{padding-top:20px!important}.sd-padding-right-20{padding-right:20px!important}.sd-padding-bottom-20{padding-bottom:20px!important}.sd-padding-left-20{padding-left:20px!important}.sd-padding-20{padding:20px!important}.sd-mobile-img-figure>img{width:100%!important;height:auto!important}#layout .block[data-image-position=left] td.figure{padding-right:0!important}#layout .block[data-image-position=right] td.figure{padding-left:0!important}}@media only screen and (min-device-width:320px) and (max-device-width:480px){.horizontal-rule{width:100%!important;min-width:100%!important;}}</style><!--[if mso]>
-<style>
-[style*="Open Sans"] {
-    font-family: 'Open Sans', Arial, sans-serif !important
+.ExternalClass {
+	width: 100%;
 }
-#layout .mso-full-width {
-width: 100% !important
-}
-.sd-mobile-quicklinks table{
-    border-collapse: collapse !important;
-    border-spacing: 0 !important;
-    display: none;
-    font-size: 0;
-    margin: 0;
-    max-height: 0;
-    line-height: 0;
-    mso-hide: all;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 0
-}
-table,
-td {
-    mso-table-lspace: 0pt !important;
-    mso-table-rspace: 0pt !important;
-}
-</style>
-<![endif]--><!--[if gte mso 12]>
-<style type="text/css">
-    #layout {
-        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-    }
-</style>
-<![endif]--><meta name="ROBOTS" content="NOINDEX,NOARCHIVE,NOFOLLOW,NOSNIPPET,NOYDIR,NOODP"><meta http-equiv="cache-control" content="NO-CACHE"><meta http-equiv="pragma" content="NO-CACHE"></head><body style="margin: 0px; padding: 0;">
-<style type="text/css">
 body {
-margin: 0 auto; padding: 0;
+	font-family:Helvetica, Arial, sans-serif;
+	color:#000000;
+	font-size:13px;
+	background-image: url('http://cantaloupe.e-newsletter.com.au/media/dynamic/id/zzzz4f5456669e7c8339zzzz4f73aa8ab313b645/bg.gif');
+	 background-repeat: repeat-y no-repeat;
+background-color: #FFF;
+margin: 0;
+   padding: 0;
 }
-</style><a name="body" style="color: #656d78; line-height: 17px; text-decoration: none;"></a>
+
+.im {
+color: #070707;
+}
+
+a {color:#ff497c; font-weight:bold; text-decoration:none;}
+a:visited {color:#ff497c; font-weight:bold; text-decoration:none;}
+a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
+
+.authorwhite img {border:1px solid #000000;}
+.author img {border:1px solid #ffffff;}
+
+.black a {color:#070707 !important;}
+.black a:visited {color:#070707 !important;}
+
+.pfwdbottom a {color:#070707; font-weight:bold; font-size:12px; text-decoration:none;}
+.pfwdbottom a:visited {color:#070707; font-weight:bold; font-size:12px; text-decoration:none;}
+
+.pfwd a {color:#11b5bb; font-weight:bold; font-size:12px; text-decoration:none;}
+.pfwd a:visited {color:#11b5bb; font-weight:bold; font-size:12px; text-decoration:none;}
+
+.pfwdpink a {color:#ff497c; font-weight:bold; font-size:12px; text-decoration:none;}
+.pfwdpink a:visited {color:#ff497c; font-weight:bold; font-size:12px; text-decoration:none;}
 
 
-<div>
-<div id="layout" style="background: white; line-height: 1.42857143;">
-<style class="page-width" type="text/css">.section > tbody > tr > td > .grid > table {
-            width: 800px;
+
+</style>
+
+                <style type="text/css">
+				
+				input{
+	-moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+	-webkit-transition:border linear 0.2s,box-shadow linear 0.2s;
+	-moz-transition:border linear 0.2s,box-shadow linear 0.2s;
+	-ms-transition:border linear 0.2s,box-shadow linear 0.2s;
+	-o-transition:border linear 0.2s,box-shadow linear 0.2s;
+	transition:border linear 0.2s,box-shadow linear 0.2s;
+
+	border: 1px solid #ccc;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	color: #555555;
+	display: inline-block;
+	font-size: 13px;
+	line-height: 30px;
+	margin-bottom: 9px;
+	padding: 4px;
+    width: 260px;
+}
+
+
+.btn{
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #FAFAFA;
+	background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
+	background-repeat: no-repeat;
+	border-color: #CCCCCC #CCCCCC #BBBBBB;
+	border-radius: 4px 4px 4px 4px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: #333333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	padding: 5px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+				
+				</style>
+                
+                    <script type="text/javascript">
+    //move to head
+        function validateForm() {
+            var errMsg = "";
+
+    		if(document.getElementById('st[FIRST_NAME]').value==""){
+    			errMsg+="* Please enter your first name.\n";
+    		}
+    		if(document.getElementById('st[LAST_NAME]').value==""){
+    			errMsg+="* Please enter your last name.\n";
+    		}
+    		if(document.getElementById('st[EMAIL]').value==""){
+    			errMsg+="* Please enter your email address.\n";
+    		}
+
+            if (errMsg != "") {
+                alert("The following errors were found. Please correct them.\n\n" + errMsg);
+                return false;
+            }
+            else {
+                return true;
+            }
         }
-</style><table border="0" cellpadding="0" cellspacing="0" id="header_wide" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr><td align="center">
-			<table border="0" cellpadding="0" cellspacing="0" class="section section-wide" id="header" style="font-family: inherit; font-size: 14px; width: 100%;"><tbody><tr><td class="allow allow-4">
-						<div class="grid grid-1 allow-top allow-bottom allow-move allow-delete" style="display: block; text-align: center;">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: inherit; font-size: 14px; margin: 0px auto; text-align: left; width: 800px;"><tbody><tr><td>
-									
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="contenttable mso-full-width" style="font-family: inherit; font-size: 14px; width: 800px;" width="800"><tbody><tr><td class="block text-style-1" data-sd-content="image" droppable="true" editable="true" nodelete="false" quicklink="false" share="false" style="background: white; color: #646c78; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 21px;" valign="top">
-												<table border="0" cellpadding="0" cellspacing="0" class="block-body" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr class="figure-container"><td class="figure" style="color: #646c78;"><img src="https://suitelive.s3-ap-southeast-2.amazonaws.com/sd_images/mit47793dd06cbf9c2f2zzzz5aa715c4a3edd776" style="display: block;" width="800"></td>
-														</tr></tbody></table></td>
-											</tr></tbody></table></td>
-								</tr></tbody></table></div>
-						</td>
-					</tr><tr class="sd-mobile-quicklinks hidden" style="display: none !important;"><td class="allow allow-1">
-						<div class="grid grid-1 allow-top allow-bottom allow-move allow-delete" style="border-collapse: collapse !important; border-spacing: 0px !important; display: block; font-size: 0px; height: 0px; margin: 0px; max-height: 0px; mso-hide: all; overflow: hidden; padding: 0px; position: relative; text-align: center; width: 0px;">
-						<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; font-size: 12px; margin: 0px auto; text-align: left; width: 100%;" width="100%"><tbody><tr><td class="block" data-sd-content="none" droppable="false" editable="false" export="false" quicklink="false" share="false" style="display: none; font-size: 0px; line-height: 0; max-height: 0px; padding: 0px;">&#x00a0;</td>
-								</tr></tbody></table></div>
-						</td>
-					</tr></tbody></table></td>
-		</tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" id="middle_0_wide" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr><td align="center">
-			<table border="0" cellpadding="0" cellspacing="0" class="section section-fixed" id="middle_0" style="font-family: inherit; font-size: 14px; width: 800px;" width="800"><tbody><tr><td class="allow allow-4">
-						<div class="grid grid-1 allow-top allow-bottom allow-move allow-delete" style="display: block; text-align: center;">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: inherit; font-size: 14px; margin: 0px auto; text-align: left; width: 800px;"><tbody><tr><td>
-									<!--[if mso]> </td> <td valign="top" align="left" width="800px" style="width: 800px;"><![endif]-->
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="contenttable mso-full-width" style="font-family: inherit; font-size: 14px; width: 800px;" width="800"><tbody><tr><td class="block text-style-1 editing" data-sd-content="subscription" droppable="true" editable="true" nodelete="false" quicklink="false" share="false" style="background: white; color: #646c78; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 21px; padding: 20px;" valign="top">
-<!--  SM-3244  start -->
-												<!--  SM-3244  end --><table border="0" cellpadding="0" cellspacing="0" class="block-body" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr class="header-container"><td class="header" style="color: #646c78; line-height: 26px; padding: 0px 0px 15px;">
-															<div class="header1" style="color: #646c78; font-family: 'Lato', Arial, sans-serif; font-size: 1.5em; line-height: 1.2em;">Retest on Staging Subscription API</div>
-															</td>
-														</tr><tr class="intro-container"><td class="intro" style="color: #646c78; font-family: 'Open Sans', sans-serif; line-height: 20px; padding: 0px 0px 5px;">
-															<div class="intro-text">Please fill in the form to subscribe</div>
-															</td>
-														</tr><tr class="form-container"><td class="form" style="color: #646c78;">
-															<form autocomplete="off" style="box-sizing: border-box;">
-															<div class="form-group required" style="box-sizing: border-box; margin-bottom: 15px;">
-<label class="control-label" style="box-sizing: border-box; display: inline-block; font-weight: bold; margin-bottom: 5px; max-width: 100%;">First name </label><br style="box-sizing: border-box;"><input class="form-control" name="st[FIRST_NAME]" type="text" style="-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; background: #ffffff none; border: 1px solid #cccccc; border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-sizing: border-box; color: #555555; display: block; font-family: inherit; font-size: 14px; height: 34px; line-height: 1.42857143; padding: 6px 12px; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; width: 100%;"></div>
+    </script>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script type="text/javascript">
+	function subscribeUser(){
+		frm = document.subscribe;
+		var st = {};
+		st.FIRST_NAME = frm.elements['st[FIRST_NAME]'].value;
+		st.LAST_NAME = frm.elements['st[LAST_NAME]'].value;
+		st.EMAIL = frm.elements['st[EMAIL]'].value;
 
-															<div class="form-group required" style="box-sizing: border-box; margin-bottom: 15px;">
-<label class="control-label" style="box-sizing: border-box; display: inline-block; font-weight: bold; margin-bottom: 5px; max-width: 100%;">Last name </label><br style="box-sizing: border-box;"><input class="form-control" name="st[LAST_NAME]" type="text" style="-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; background: #ffffff none; border: 1px solid #cccccc; border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-sizing: border-box; color: #555555; display: block; font-family: inherit; font-size: 14px; height: 34px; line-height: 1.42857143; padding: 6px 12px; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; width: 100%;"></div>
+		var cu = {};
+		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
+		
+		var gr = ['zzzz51099b7689844611'];
+	
+		$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
+		  {
+			st: st,
+			cu: cu,
+			gr: gr,
+			method: 'updateall',
+			format: "json",
+			double_opt_in: true,
+			double_opt_in_subject: "Click to confirm your subscription",
+			return_url: "http://internal.staging.swiftdigital.com.au/subscriptionconfirmation"
+		  },
+		  function(data) {
+			console.log(data);
+		  });
+		}
+	</script>
 
-															<div class="form-group required" style="box-sizing: border-box; margin-bottom: 15px;">
-<label class="control-label" style="box-sizing: border-box; display: inline-block; font-weight: bold; margin-bottom: 5px; max-width: 100%;">Email </label><br style="box-sizing: border-box;"><input class="form-control" name="st[EMAIL]" type="text" style="-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; background: #ffffff none; border: 1px solid #cccccc; border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-sizing: border-box; color: #555555; display: block; font-family: inherit; font-size: 14px; height: 34px; line-height: 1.42857143; padding: 6px 12px; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; width: 100%;"></div>
-															<input name="gr[]" type="hidden" value="zzzz4f34b1338305f628" style="box-sizing: border-box; font-family: inherit; font-size: inherit; line-height: inherit;"><input name="method" type="hidden" value="skip" style="box-sizing: border-box; font-family: inherit; font-size: inherit; line-height: inherit;"><input name="format" type="hidden" value="json" style="box-sizing: border-box; font-family: inherit; font-size: inherit; line-height: inherit;"><input type="hidden" name="editionid" value="zzzz5b889dc4c4a7c922" style="box-sizing: border-box; font-family: inherit; font-size: inherit; line-height: inherit;"></form>
-															</td>
-														</tr><tr class="submit-button-container"><td class="submit-btn" style="color: #646c78;">
-<!-- SM-3173 start --><a class="btn-cm btn-submit-subscription" data-thankyou-msg="Thank you for subscribing." href="http://internal.staging.swiftdigital.com.au/link/id/zzzz5b88a9ee844e8741Pzzzz5ac2d403522fb963/page.html" style="-webkit-text-size-adjust: none; background: #4fc1e9; border-radius: 4px; color: white; display: inline-block; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 17px; mso-hide: all; padding: 10px 15px; text-align: center; text-decoration: none; width: 728px;" submit-id="a1cda8a9f47a79c1">OK</a> <!-- SM-3173 end -->
+	
+	
+                
+                </head>
+
+<body bgcolor="#ffffff" style="margin:0;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="229">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    </td>
+    <td width="650" valign="top" bgcolor="#ffffff"><table width="650" border="0" cellspacing="0" cellpadding="0" align="center">
+
+                <!-- STATICBANNER -->
+                <tr>
+   <td width="650" align="left" valign="bottom" style="padding-top:60px; line-height:50%;" bgcolor="#000000"><img src="http://cantaloupe.e-newsletter.com.au/media/dynamic/id/zzzz4f5456669e7c8339zzzz4f73be1293e5c773/TOPBAR.gif" width="650" height="91" alt="CANTELOUPE TRAVEL" style="text-align:center; font-weight:bold; font-size:45px; color:#f8f8f8;"></td>
+        </tr>
+                <tr>
+          <td width="650" align="center" valign="top" bgcolor="#ffffff" style="padding:15px 0px 25px 0px;"><img src="http://cantaloupe.e-newsletter.com.au/media/dynamic/id/zzzz4f5456669e7c8339zzzz4f73be129f627677/BANNER.gif" style="text-align:center; color:#000000;" width="218" height="19" alt="ACROSS THE GLOBE"></td>
+        </tr>
+                
+                <!-- Canteloupe Travel - Region - NAV -->
+                        <tr>
+          <td width="650" align="center" valign="top" bgcolor="#ffffff">&nbsp;</td>
+        </tr>
+<tr>
+<td height="15" bgcolor="#ffffff">&nbsp;</td>
+</tr>
+
+                      </table></td>
+  <td valign="top">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="229">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+  </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">&nbsp;</td>
+    
+    <td align="left" valign="top">
+    
+    <!-- main content -->
+    <table width="650" border="0" cellspacing="0" cellpadding="0">
+
+               
+                        <tr>
+          <td width="650" align="left" valign="top" bgcolor="#FFFFFF" style="padding-bottom:15px;">
+          
+          
+          <table width="650" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" valign="top" width="20">&nbsp;</td>
+                <!-- left hand column -->
+                
+                <!-- end left -->
+               <td align="left" valign="top" width="610" style="padding:0px 0px 30px 0px;font-family:Helvetica, Arial, sans-serif;color:#000;font-size:13px; line-height:20px;">
+			    <!-- Start -->
+				<table align="center" width="80%" border="0" cellspacing="0" cellpadding="0" style="font-family:arial, Sans-Serif; font-size:12px;">
+					<tr>
+						<td align="center" style="color:#EA245B; font-size:16px; padding-bottom:20px; font-weight:bold;"><br>
+						<br></td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<form name="subscribe" action="#" method="post" onsubmit="return validateForm();"><input type="checkbox" name="name_email_halt" style="display: none;" value="yes"><script type="text/javascript">if (location.hash === "#spambot") { setTimeout("alert('Spambot or form pre-filler detected.');", 250); }</script>         
+							<input type="hidden" name="parent_id" value="zzzz52a6974176a24826">
+							<table border="0" cellspacing="10" cellpadding="0" style="font-family: Arial, sans-serif; font-size: 12px;">
+							<tr>
+								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>First Name:</strong></td>
+								<td><input type="text" name="st[FIRST_NAME]" id="st[FIRST_NAME]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Last Name:</strong></td>
+								<td><input type="text" name="st[LAST_NAME]" id="st[LAST_NAME]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Email:</strong></td>
+								<td><input type="text" name="st[EMAIL]" id="st[EMAIL]" size="20" maxlength="200" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td><input type="button" class="btn" name="submit" onclick="subscribeUser();"  value="Subscribe"></td>
+							</tr>
+							</table>
+							</form>
+						</td>
+					</tr>
+					
+				</table>
+				<!-- End -->
 </td>
-														</tr></tbody></table></td>
-											</tr></tbody></table></td>
-								</tr></tbody></table></div>
-						</td>
-					</tr></tbody></table></td>
-		</tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" id="footer_wide" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr><td align="center">
-			<table border="0" cellpadding="0" cellspacing="0" class="section section-wide" id="footer" style="font-family: inherit; font-size: 14px; width: 100%;"><tbody><tr><td class="allow allow-4">
-						<div class="grid grid-1 allow-top allow-bottom allow-move allow-delete" style="display: block; text-align: center;">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: inherit; font-size: 14px; margin: 0px auto; text-align: left; width: 800px;"><tbody><tr><td>
-									<!--[if mso]> </td> <td valign="top" align="left" width="800px" style="width: 800px;"><![endif]-->
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="contenttable mso-full-width" style="font-family: inherit; font-size: 14px; width: 800px;" width="800"><tbody><tr><td class="block text-style-6" data-sd-content="article" data-theme-color="text-style-6 " droppable="true" editable="true" nodelete="false" quicklink="true" share="false" style="background: #434953; color: #ffffff; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 21px;" valign="top">
-												<table border="0" cellpadding="0" cellspacing="0" class="article sd-editable block-body imgCtrlPage" href="#f2afa267557d8c87" id="f2afa267557d8c87" width="100%" style="font-family: inherit; font-size: 14px;"><tbody><tr class="main-container"><td class="main" style="color: #ffffff; font-family: 'Open Sans', sans-serif; line-height: 20px; padding: 20px;">
-															<div style="text-align: center;">&#x00a9; 2018 Swift Digital. All Rights Reserved.</div>
-															</td>
-														</tr></tbody></table></td>
-											</tr></tbody></table></td>
-								</tr></tbody></table></div>
-						</td>
-					</tr></tbody></table></td>
-		</tr></tbody></table></div>
-</div>
+                <!-- right hand column -->
+                
+                <!-- end right -->
+                <td align="left" valign="top" width="20">&nbsp;</td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
 
+                <!-- Canteloupe Travel - Article - BottomArticle -->
+                              
+                <!-- FOOTER -->
+                        <tr>
+          <td width="650" align="left" valign="top" bgcolor="#000000">
+          <table width="100%" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td align="left" valign="top" bgcolor="#000000">
+    <img src="http://cantaloupe.e-newsletter.com.au/media/dynamic/id/zzzz4f5456669e7c8339zzzz4f8666cb35753919/canteloupetravel2_20.gif" border="0" width="150" height="48" alt="CANTELOUPE TRAVEL" style="font-weight:bold; color:#f8f8f8;"></td>
+ <td align="left" valign="top" bgcolor="#000000" width="10">&nbsp;</td>    
+<td align="left" valign="top" bgcolor="#000000" style="color:#FFF; font-size:11px;">
+<a href="http://cantaloupe.e-newsletter.com.au/link/id/zzzz4fc2d71e5f13e035/page.html?parent_id=zzzz4fa208d4f15b6433&prompt=1" target="_blank" style="color:#ffffff; font-weight:normal; text-decoration:none;">Update your details</a>    |    Disclaimer    |    Privacy Policy<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at rutrum mi. Nullam commodo eros vel ligula viverra eu congue purus pellentesque. Pellentesque mattis. </td>
+  </tr>
+</table>
 
+  </td>
+        </tr>
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cf1d991d59","applicationID":"36303761","transactionName":"M1IHMUdZXhFYBkFbWgoYMBdcF1kMXQBNbUEBRBFLRVBA","queueTime":0,"applicationTime":1597,"atts":"HxUERw9DTR8=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript" src="/includes/t3/page/assets/js/page.js"></script><script id="archived_script" type="text/javascript" src="/includes/t3/composer/assets/js/archived.js?data=1wlr64XSzmO3h4wKtGQztAgJoa8TXe2nVCJgjYJVnLD9H74IApAlQlLcQzdtGZphJrUqQjznFBjDR1QR3ZWY3wEOCJhNBOyo2qvI9hJTgukEQaICzTs9lxMjkd4F2-DM7TjvILdcfYA1w0fCe3qYtmDuuh5kTNd2qoCj-wdLlWmw=="></script><script type="text/javascript">function ath(){for(var e=document.getElementsByClassName("grid"),t=0;t<e.length;t++)if($correctTables=[],$tables=e[t].querySelectorAll(".contenttable"),null!=$tables){for(var r=0;r<$tables.length;r++)$correctTables.push($tables[r]);for(var l=0,a=0;a<$correctTables.length;a++){var o=$correctTables[a];o.removeAttribute("height"),o.style.height="auto";var c=o.querySelector(".block");null!=c&&(c.removeAttribute("height"),c.style.height="auto");var n=parseInt(window.getComputedStyle(o).height);l=n>l?n:l}for(var h=0;h<$correctTables.length;h++){var o=$correctTables[h];o.style.height=l+"px"}}}!function(){var e=document.getElementsByTagName("img");if(null!=e)for(var t=0;t<e.length;t++){var r=new Image;r.onload=ath,r.src=e[t].src}ath()}();</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cf1d991d59","applicationID":"30089144","transactionName":"M1IHMUdZXhFYBkFbWgoYMBdcF1UQSwpHHEUMRw==","queueTime":0,"applicationTime":89,"atts":"HxUERw9DTR8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>
+                
+      </table>
+      <!-- end main content -->
+      
+    </td>
+   
+    <td align="left" valign="top">&nbsp;</td>
+  </tr>
 
+</table>
+<div id="plplug" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; text-align: center; color: #999;"> <a title="This email marketing subscription form is powered by SwiftDigital e-newsletter software" href="http://cantaloupe.e-newsletter.com.au/link/id/zzzz4fa20944c6a9f610/page.html" target="_blank" class="plplug" style="text-decoration: none; color: #999;">This email marketing</a> subscription form is powered by <a title="This email marketing subscription form is powered by SwiftDigital e-newsletter software" href="http://cantaloupe.e-newsletter.com.au/link/id/zzzz4fa20944c7121578/page.html" target="_blank" class="plplug" style="text-decoration: none; color: #999;"><span style="color:#3293e8; font-weight:bold">SwiftDigital</span>
+ e-newsletter software.</a></div>
+</body>
+</html>
