@@ -6,6 +6,31 @@
 
 <title>Canteloupe - Subscribe</title>
 
+<script type="text/javascript">
+    //move to head
+        function validateForm() {
+            var errMsg = "";
+
+    		if(document.getElementById('st[FIRST_NAME]').value==""){
+    			errMsg+="* Please enter your first name.\n";
+    		}
+    		if(document.getElementById('st[LAST_NAME]').value==""){
+    			errMsg+="* Please enter your last name.\n";
+    		}
+    		if(document.getElementById('st[EMAIL]').value==""){
+    			errMsg+="* Please enter your email address.\n";
+    		}
+
+            if (errMsg != "") {
+                alert("The following errors were found. Please correct them.\n\n" + errMsg);
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+
                 <!-- STYLES -->
                 <style type="text/css">
 .ReadMsgBody {
@@ -106,30 +131,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 				
 				</style>
                 
-                    <script type="text/javascript">
-    //move to head
-        function validateForm() {
-            var errMsg = "";
-
-    		if(document.getElementById('st[FIRST_NAME]').value==""){
-    			errMsg+="* Please enter your first name.\n";
-    		}
-    		if(document.getElementById('st[LAST_NAME]').value==""){
-    			errMsg+="* Please enter your last name.\n";
-    		}
-    		if(document.getElementById('st[EMAIL]').value==""){
-    			errMsg+="* Please enter your email address.\n";
-    		}
-
-            if (errMsg != "") {
-                alert("The following errors were found. Please correct them.\n\n" + errMsg);
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-    </script>
+                  
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 	<script type="text/javascript">
 	function subscribeUser(){
