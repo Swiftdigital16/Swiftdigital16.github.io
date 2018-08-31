@@ -137,14 +137,16 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 	function subscribeUser(){
 		frm = document.subscribe;
 		var st = {};
+		st.TITLE = frm.elements['st[TITLE]'].value;
 		st.FIRST_NAME = frm.elements['st[FIRST_NAME]'].value;
 		st.LAST_NAME = frm.elements['st[LAST_NAME]'].value;
 		st.EMAIL = frm.elements['st[EMAIL]'].value;
+		st.MOBILE = frm.elements['st[MOBILE]'].value;
 
 		var cu = {};
 		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
 		
-		var gr = ['zzzz51099b7689844611'];
+		var gr = ['zzzz5b88b746f225e560', 'zzzz5b88b7520fba3415'];
 	
 		$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
 		  {
@@ -154,7 +156,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 			method: 'updateall',
 			format: "json",
 			double_opt_in: true,
-			double_opt_in_subject: "Click to confirm your subscription",
+			double_opt_in_subject: "Staging Double Opt in Confirmation Email",
 			return_url: "http://internal.staging.swiftdigital.com.au/subscriptionconfirmation"
 		  },
 		  function(data) {
@@ -240,6 +242,10 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							<input type="hidden" name="parent_id" value="zzzz52a6974176a24826">
 							<table border="0" cellspacing="10" cellpadding="0" style="font-family: Arial, sans-serif; font-size: 12px;">
 							<tr>
+								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Title:</strong></td>
+								<td><input type="text" name="st[TITLE]" id="st[TITLE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
 								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>First Name:</strong></td>
 								<td><input type="text" name="st[FIRST_NAME]" id="st[FIRST_NAME]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
@@ -250,6 +256,10 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							<tr>
 								<td align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Email:</strong></td>
 								<td><input type="text" name="st[EMAIL]" id="st[EMAIL]" size="20" maxlength="200" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Mobile:</strong></td>
+								<td><input type="text" name="st[MOBILE]" id="st[MOBILE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
