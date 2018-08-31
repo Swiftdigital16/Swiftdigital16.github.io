@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, noarchive">
 <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
 
-<title>Canteloupe - Subscribe</title>
+<title>Retest Staging Double Opt In - Subscribe</title>
 
                 <!-- STYLES -->
                 <style type="text/css">
@@ -111,7 +111,10 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
     //move to head
         function validateForm() {
             var errMsg = "";
-
+			
+			if(document.getElementById('st[TITLE]').value==""){
+    			errMsg+="* Please enter your title.\n";
+    		}
     		if(document.getElementById('st[FIRST_NAME]').value==""){
     			errMsg+="* Please enter your first name.\n";
     		}
@@ -120,6 +123,9 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
     		}
     		if(document.getElementById('st[EMAIL]').value==""){
     			errMsg+="* Please enter your email address.\n";
+    		}
+			if(document.getElementById('st[MOBILE]').value==""){
+    			errMsg+="* Please enter your mobile.\n";
     		}
 
             if (errMsg != "") {
@@ -145,6 +151,8 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 
 		var cu = {};
 		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
+		cu.cu_POSITION = frm.elements['cu[POSITION]'].value;
+		cu.cu_DIETARY_REQUIREMENTS = frm.elements['cu[DIETARY_REQUIREMENTS]'].value;
 		
 		var gr = ['zzzz5b88b746f225e560', 'zzzz5b88b7520fba3415'];
 	
@@ -192,21 +200,8 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
                 
                 <!-- Canteloupe Travel - Region - NAV -->
                         <tr>
-          <td width="650" align="center" valign="top" bgcolor="#ffffff">&nbsp;</td>
         </tr>
 <tr>
-<td height="15" bgcolor="#ffffff">&nbsp;</td>
-</tr>
-
-                      </table></td>
-  <td valign="top">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td height="229">&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
 </table>
   </td>
   </tr>
@@ -260,6 +255,14 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							<tr>
 								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Mobile:</strong></td>
 								<td><input type="text" name="st[MOBILE]" id="st[MOBILE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Position:</strong></td>
+								<td><input type="text" name="cu[POSITION]" id="cu[POSITION]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+							</tr>
+							<tr>
+								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Dietary Requirements:</strong></td>
+								<td><input type="text" name="cu[DIETARY_REQUIREMENTS]" id="cu[DIETARY_REQUIREMENTS]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
