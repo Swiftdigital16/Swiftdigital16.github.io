@@ -131,36 +131,38 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
             }
         }
     </script>
-<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-	<script type="text/javascript">
-	function subscribeUser(){
-		frm = document.subscribe;
-		var st = {};
-		st.FIRST_NAME = frm.elements['st[FIRST_NAME]'].value;
-		st.LAST_NAME = frm.elements['st[LAST_NAME]'].value;
-		st.EMAIL = frm.elements['st[EMAIL]'].value;
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
 
-		var cu = {};
-		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
-		
-		var gr = ['zzzz51099b7689844611'];
+<script type="text/javascript">
+function subscribeUser(){
+	frm = document.subscribe;
+	var st = {};
+	st.FIRST_NAME = frm.elements['st[FIRST_NAME]'].value;
+	st.LAST_NAME = frm.elements['st[LAST_NAME]'].value;
+	st.EMAIL = frm.elements['st[EMAIL]'].value;
+
+	var cu = {};
+	//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
 	
-		$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
-		  {
-			st: st,
-			cu: cu,
-			gr: gr,
-			method: 'updateall',
-			format: "json",
-			double_opt_in: true,
-			double_opt_in_subject: "Click to confirm your subscription",
-			return_url: "http://internal.staging.swiftdigital.com.au/subscriptionconfirmation"
-		  },
-		  function(data) {
-			console.log(data);
-		  });
-		}
-	</script>
+	var gr = ['zzzz51099b7689844611'];
+
+	$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
+	  {
+		st: st,
+		cu: cu,
+		gr: gr,
+		method: 'updateall',
+		format: "json",
+		double_opt_in: true,
+		double_opt_in_subject: "Click to confirm your subscription",
+		return_url: "http://internal.staging.swiftdigital.com.au/subscriptionconfirmation"
+	  },
+	  function(data) {
+		console.log(data);
+	  });
+	}
+</script>
+
 
 	
 	
