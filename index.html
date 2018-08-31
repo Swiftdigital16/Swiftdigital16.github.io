@@ -106,7 +106,36 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 }
 				
 				</style>
-	
+	<script type="text/javascript">
+        function validateForm() {
+            var errMsg = "";
+			
+			if(document.getElementById('st[TITLE]').value==""){
+    			errMsg+="* Please enter your title.\n";
+    		}
+    		if(document.getElementById('st[FIRST_NAME]').value==""){
+    			errMsg+="* Please enter your first name.\n";
+    		}
+    		if(document.getElementById('st[LAST_NAME]').value==""){
+    			errMsg+="* Please enter your last name.\n";
+    		}
+    		if(document.getElementById('st[EMAIL]').value==""){
+    			errMsg+="* Please enter your email address.\n";
+    		}
+			if(document.getElementById('st[MOBILE]').value==""){
+    			errMsg+="* Please enter your mobile.\n";
+    		}
+
+            if (errMsg != "") {
+                alert("The following errors were found. Please correct them.\n\n" + errMsg);
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+				
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 	<script type="text/javascript">
 	function subscribeUser(){
@@ -141,37 +170,6 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 		  });
 		}
 	</script>
-
-	<script type="text/javascript">
-    //move to head
-        function validateForm() {
-            var errMsg = "";
-			
-			if(document.getElementById('st[TITLE]').value==""){
-    			errMsg+="* Please enter your title.\n";
-    		}
-    		if(document.getElementById('st[FIRST_NAME]').value==""){
-    			errMsg+="* Please enter your first name.\n";
-    		}
-    		if(document.getElementById('st[LAST_NAME]').value==""){
-    			errMsg+="* Please enter your last name.\n";
-    		}
-    		if(document.getElementById('st[EMAIL]').value==""){
-    			errMsg+="* Please enter your email address.\n";
-    		}
-			if(document.getElementById('st[MOBILE]').value==""){
-    			errMsg+="* Please enter your mobile.\n";
-    		}
-
-            if (errMsg != "") {
-                alert("The following errors were found. Please correct them.\n\n" + errMsg);
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-    </script>
                 
                 </head>
 
@@ -230,7 +228,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 					</tr>
 					<tr>
 						<td valign="top">
-							<form name="subscribe" action="#" method="post" onsubmit="return validateForm();"><input type="checkbox" name="name_email_halt" style="display: none;" value="yes"><script type="text/javascript">if (location.hash === "#spambot") { setTimeout("alert('Spambot or form pre-filler detected.');", 250); }</script>         
+							<form name="subscribe" action="/action_page.php" method="post" onsubmit="return validateForm();"><input type="checkbox" name="name_email_halt" style="display: none;" value="yes"><script type="text/javascript">if (location.hash === "#spambot") { setTimeout("alert('Spambot or form pre-filler detected.');", 250); }</script>         
 							<input type="hidden" name="parent_id" value="zzzz52a6974176a24826">
 							<table border="0" cellspacing="10" cellpadding="0" style="font-family: Arial, sans-serif; font-size: 12px;">
 							<tr>
