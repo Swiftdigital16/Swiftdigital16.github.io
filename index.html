@@ -136,8 +136,9 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
         }
     </script>
 				
-<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-	<script type="text/javascript">
+<script src=" https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
 	function subscribeUser(){
 		frm = document.subscribe;
 		var st = {};
@@ -149,25 +150,21 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 
 		var cu = {};
 		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
-		cu.cu_POSITION = frm.elements['cu[POSITION]'].value;
-		cu.cu_DIETARY_REQUIREMENTS = frm.elements['cu[DIETARY_REQUIREMENTS]'].value;
 		
-		var gr = ['zzzz5b88b746f225e560', 'zzzz5b88b7520fba3415'];
+		var gr = ['zzzz5bff5b74bae5a812'];
 	
-		$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
-		  {
-			st: st,
-			cu: cu,
-			gr: gr,
-			method: 'updateall',
-			format: "json",
-			double_opt_in: true,
-			double_opt_in_subject: "Staging Double Opt in Confirmation Email",
-			return_url: "http://internal.staging.swiftdigital.com.au/retest-staging-double-opt-in-thank-you"
-		  },
-		  function(data) {
-			console.log(data);
-		  });
+		$.getJSON("https://news.digitaltechnologieshub.edu.au/scripts/subscribe/subscribe.php?callback=?",
+		   {
+                st: st,
+                cu: cu,
+                gr: gr,                                                                     // st, cu, gr are query params for passing the data to the server.
+
+                method: "skip",                                                      // Using method skip
+                format: "json"
+                }, function(data) {                                                  // You will get the JSON response here.
+                       console.log('response from server');
+                       console.log(data)                                          // By the help of console.log() you can see the response.
+         });
 		}
 	</script>
                 
@@ -224,7 +221,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 			    <!-- Start -->
 				<table align="center" width="80%" border="0" cellspacing="0" cellpadding="0" style="font-family:arial, Sans-Serif; font-size:12px;">
 					<tr>
-						<td align="center" style="color:#000000; font-size:16px; padding-bottom:20px; font-weight:bold;">Retest Staging Double Opt In</td>
+						<td align="center" style="color:#000000; font-size:16px; padding-bottom:20px; font-weight:bold;">Subscription</td>
 					</tr>
 					<tr>
 						<td valign="top">
@@ -250,14 +247,6 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							<tr>
 								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Mobile:</strong></td>
 								<td><input type="text" name="st[MOBILE]" id="st[MOBILE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
-							</tr>
-							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Position:</strong></td>
-								<td><input type="text" name="cu[POSITION]" id="cu[POSITION]" size="20" maxlength="40" value="" style="width: 250px;"></td>
-							</tr>
-							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Dietary Requirements:</strong></td>
-								<td><input type="text" name="cu[DIETARY_REQUIREMENTS]" id="cu[DIETARY_REQUIREMENTS]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
